@@ -1,41 +1,40 @@
 ```markdown
-# 📥 Import Data Using Transform Maps
+# 🚀 Import Data using Transform Maps | ServiceNow Project
 
-**A ServiceNow team project demonstrating data import from external sources into ServiceNow tables using Import Sets and Transform Maps.**
-
-🔗 **Live Demo**: [Watch Demo Video](https://drive.google.com/file/d/1rvitBIzuYuJsYaIU-OKwLdHg8auo2UZi/view?usp=drivesdk)
+A practical team project demonstrating **data import** into ServiceNow using **Import Sets** and **Transform Maps**.
 
 ---
 
 ## 📌 Project Overview
 
-This project shows how to load external data (Excel / CSV) into ServiceNow using the standard **Import Set → Transform Map** pipeline.
+This repository documents a complete ServiceNow data import implementation.  
+External data (from Excel) is loaded into a staging **Import Set** table, then cleanly mapped and transformed into a target table using **Transform Maps**.
 
-**What is a Transform Map?**  
-A Transform Map defines how data moves from a temporary staging table (Import Set) to a target ServiceNow table (e.g., Users, Incidents, CMDB). It handles field mapping, data cleaning, and duplicate prevention via coalesce fields.
-
-**Who uses this?**  
-ServiceNow Administrators, Developers, and Integration Specialists who need to:
-- Import bulk data from spreadsheets or external systems
-- Migrate data from legacy systems
-- Keep records updated without creating duplicates
-- Apply business rules and data transformations during import
+**Why this matters**  
+ServiceNow Transform Maps are the standard, reliable way for organizations to bring external data (users, assets, incidents, CMDB records, vendor lists, etc.) into the platform without writing custom code for every import. They are used daily by IT teams, ServiceNow administrators, and integration specialists for bulk data loading, migrations, and ongoing system integrations.
 
 ---
 
-## 🎯 Project Objectives
+## 🎯 What This Project Covers
 
-- Load external data into ServiceNow using Import Sets
-- Create and configure Transform Maps
-- Map source fields to target table fields
-- Prevent duplicate records using Coalesce
-- Demonstrate a clean, reusable import process
+- Loading data from an Excel file into ServiceNow
+- Creating and configuring an **Import Set** (staging table)
+- Building a **Transform Map** with field mappings
+- Using coalesce to prevent duplicate records
+- Running the transform and verifying results
+- Full project documentation across all phases
 
 ---
 
-## 🗂️ Project Structure
+## 🔗 Live Demo
 
-```text
+▶️ **[Watch the Project Demonstration](https://drive.google.com/file/d/1rvitBIzuYuJsYaIU-OKwLdHg8auo2UZi/view?usp=drivesdk)**
+
+---
+
+## 📁 Repository Structure
+
+```
 Import_Data_using_Tranform_Maps/
 ├── 1. Ideation Phase
 ├── 2. Requirement Analysis
@@ -46,58 +45,65 @@ Import_Data_using_Tranform_Maps/
 └── 7. Project Demonstration
 ```
 
-📄 **Sample Dataset**: `dataset.xlsx` (root directory)
+📄 **Dataset used**: [`dataset.xlsx`](dataset.xlsx)
 
 ---
 
-## 🔄 How the Import Process Works
+## 🛠️ Technology & Platform
 
-```text
-External Data (Excel/CSV)
-        ↓
-   Data Source
-        ↓
- Import Set Table (Staging)
-        ↓
-   Transform Map
-   (Field Maps + Scripts + Coalesce)
-        ↓
- Target Table (Final Destination)
-```
-
----
-
-## 🛠️ Key Concepts Covered
-
-| Concept              | Description                                      |
-|----------------------|--------------------------------------------------|
-| **Import Set**       | Temporary staging table for raw imported data   |
-| **Transform Map**    | Rules that map staging fields → target fields   |
-| **Field Maps**       | Direct field-to-field mapping                   |
-| **Coalesce**         | Prevents duplicates by matching existing records|
-| **Transform Scripts**| Custom logic for data cleaning and transformation|
+| Component              | Details                          |
+|------------------------|----------------------------------|
+| Platform               | ServiceNow                       |
+| Core Feature           | Import Sets + Transform Maps     |
+| Data Source            | Excel (`.xlsx`)                  |
+| Key Concepts           | Staging Table, Field Mapping, Coalesce |
 
 ---
 
 ---
 
-## 🚀 How to Use This Project
+## 📚 Key Concepts Explained
 
-1. Review the phase folders for documentation and design artifacts
-2. Use the provided `dataset.xlsx` as the sample source file
-3. Follow the demonstration steps in the **Project Demonstration** folder
-4. Watch the demo video for a complete walkthrough
+| Term                | Meaning |
+|---------------------|---------|
+| **Import Set**      | Temporary staging table that holds raw imported data |
+| **Transform Map**   | Rules that map and transform data from the staging table to the target table |
+| **Field Map**       | Individual source → target field mapping |
+| **Coalesce**        | Matching logic that updates existing records instead of creating duplicates |
+| **Target Table**    | Final ServiceNow table where clean data is stored |
 
 ---
 
-## 📚 Why This Matters
+## ✅ Project Highlights
 
-Transform Maps are a core skill for any ServiceNow professional working with data integration.  
-They enable reliable, repeatable, and controlled data imports without writing custom scripts for every load.
+- Clean, structured documentation across 7 phases
+- Real Excel dataset used for import
+- Practical demonstration of ServiceNow’s standard data import process
+- Focus on best practices (coalesce, field mapping, verification)
+
+---
+
+## 📖 How to Explore This Repo
+
+1. Start with the **Ideation** and **Requirement Analysis** folders
+2. Review the **Design** and **Planning** documents
+3. Check the **Development** phase for implementation details
+4. Watch the **Demo** video linked above
+5. Refer to the **Documentation** folder for final reports
+
+---
+
+## 💡 Who Is This Useful For?
+
+- ServiceNow beginners learning Import Sets & Transform Maps
+- Students working on ServiceNow academic projects
+- IT professionals who need a clear reference for data import processes
+- Teams preparing for ServiceNow CSA / CAD related topics
 
 ---
 
 ## 📄 License
 
-This is an academic team project created for learning purposes.
+This is an educational team project.
+
 ```
